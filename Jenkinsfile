@@ -11,7 +11,7 @@ pipeline {
 {
           steps
 {
-            git branch: 'master', url: 'https://github.com/GREATCODERHYD/boxfuse-sample-java-war-hello.git'
+            git branch: 'master', url: 'https://github.com/Saikiran-do/boxfuse-sample-java-war-hello.git'
           
           }
       }
@@ -26,7 +26,7 @@ pipeline {
       }
       stage("deploy the code"){
           steps{
-             deploy adapters: [tomcat9(credentialsId: 'id111', path: '', url: 'http://52.66.198.188:8080')], contextPath: 'App', war: '**/*.war'
+             deploy adapters: [tomcat9(credentialsId: 'apache', path: '', url: 'http://54.145.217.250:8080')], contextPath: 'Pipe', war: '**/*.war'
           }
       }
   }
